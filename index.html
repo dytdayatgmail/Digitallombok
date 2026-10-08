@@ -74,7 +74,7 @@
       }
       .nav-links a:hover { color: #fff; }
 
-      .btn-primary, .btn-secondary {
+      .btn-primary, .btn-secondary, .btn-light {
         display: inline-block;
         padding: 0.92rem 1.5rem;
         border-radius: 999px;
@@ -97,6 +97,14 @@
       }
       .btn-secondary:hover {
         background: rgba(255,255,255,0.18);
+      }
+      .btn-light {
+        background: #fff;
+        color: var(--primary-dark);
+        border: 1px solid var(--line);
+      }
+      .btn-light:hover {
+        background: #f8fbff;
       }
 
       .hero {
@@ -241,7 +249,7 @@
         gap: 28px;
         align-items: center;
       }
-      .about-box, .feature, .service-card, .process-step, .why-card {
+      .about-box, .feature, .service-card, .process-step, .why-card, .portfolio-card, .testimonial, .contact-box { 
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 22px;
@@ -260,7 +268,7 @@
         display: flex;
         align-items: flex-start;
         gap: 14px;
-        padding: 18px 18px;
+        padding: 18px;
       }
       .feature-icon {
         width: 44px;
@@ -339,6 +347,127 @@
       .why-card h3 { margin: 14px 0 10px; font-size: 1.2rem; }
       .why-card p { margin: 0; color: var(--muted); }
 
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .portfolio-card {
+        overflow: hidden;
+      }
+      .portfolio-thumb {
+        min-height: 210px;
+        background: linear-gradient(135deg, #dfeeff, #cfe7ff);
+        display: grid;
+        place-items: center;
+        font-size: 4rem;
+      }
+      .portfolio-body {
+        padding: 22px 20px 24px;
+      }
+      .portfolio-body h3 {
+        margin: 0 0 8px;
+        font-size: 1.25rem;
+      }
+      .portfolio-body p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .testimonial {
+        padding: 24px;
+      }
+      .stars { color: #fbbf24; letter-spacing: 2px; margin-bottom: 12px; }
+      .testimonial p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+      .client {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary-soft), #dfeeff);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: var(--primary-dark);
+      }
+      .client strong { display: block; }
+      .client span { color: var(--muted); font-size: 0.82rem; }
+
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 24px;
+      }
+      .contact-box {
+        padding: 28px;
+      }
+      .contact-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 20px;
+      }
+      .contact-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .contact-item .icon {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        background: var(--primary-soft);
+        border-radius: 12px;
+        color: var(--primary-dark);
+        font-weight: 800;
+      }
+      .contact-item strong { display: block; margin-bottom: 4px; }
+      .contact-item span, .contact-item a {
+        color: var(--muted);
+      }
+
+      form {
+        display: grid;
+        gap: 16px;
+      }
+      .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      label {
+        display: grid;
+        gap: 8px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+      input, textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        padding: 0.9rem 1rem;
+        font: inherit;
+        color: var(--text);
+      }
+      input:focus, textarea:focus {
+        outline: 2px solid rgba(11,107,189,0.12);
+        border-color: var(--primary);
+      }
+      textarea { min-height: 140px; resize: vertical; }
+
       .contact-cta {
         background: linear-gradient(135deg, #0f172a 0%, #122a46 100%);
         color: white;
@@ -370,8 +499,8 @@
       }
 
       @media (max-width: 980px) {
-        .hero-inner, .about-wrap { grid-template-columns: 1fr; }
-        .services-grid, .process-grid, .why-grid { grid-template-columns: 1fr 1fr; }
+        .hero-inner, .about-wrap, .contact-wrap { grid-template-columns: 1fr; }
+        .services-grid, .process-grid, .why-grid, .portfolio-grid, .testimonial-grid { grid-template-columns: 1fr 1fr; }
         .contact-cta { flex-direction: column; align-items: flex-start; }
       }
       @media (max-width: 720px) {
@@ -386,7 +515,7 @@
           gap: 14px;
         }
         .hero, section { padding-top: 70px; padding-bottom: 70px; }
-        .services-grid, .process-grid, .why-grid, .about-wrap { grid-template-columns: 1fr; }
+        .services-grid, .process-grid, .why-grid, .about-wrap, .portfolio-grid, .testimonial-grid, .field-row { grid-template-columns: 1fr; }
         .hero-actions { flex-direction: column; align-items: flex-start; }
       }
     </style>
@@ -400,6 +529,7 @@
           <a href="#tentang">Tentang</a>
           <a href="#layanan">Layanan</a>
           <a href="#proses">Proses</a>
+          <a href="#portfolio">Portofolio</a>
           <a href="#kontak">Kontak</a>
         </nav>
       </div>
@@ -615,7 +745,151 @@
         </div>
       </section>
 
+      <section id="portfolio">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Portofolio</span>
+            <h2>Contoh hasil kerja yang kami bangun untuk mitra usaha</h2>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card">
+              <div class="portfolio-thumb">🏪</div>
+              <div class="portfolio-body">
+                <h3>Website UMKM</h3>
+                <p>Desain modern dengan fokus pada penjualan, brand, dan konversi pelanggan lokal.</p>
+              </div>
+            </article>
+            <article class="portfolio-card">
+              <div class="portfolio-thumb">📣</div>
+              <div class="portfolio-body">
+                <h3>Landing Page Produk</h3>
+                <p>Campaign siap pakai yang membantu bisnis menjangkau audiens lebih luas dan tentu saja lebih cepat.</p>
+              </div>
+            </article>
+            <article class="portfolio-card">
+              <div class="portfolio-thumb">📊</div>
+              <div class="portfolio-body">
+                <h3>Dashboard & Strategi</h3>
+                <p>Pendampingan digital berbasis data agar keputusan bisnis lebih tepat dan terukur.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Testimoni</span>
+            <h2>Apa kata mitra yang sudah bekerja sama dengan kami</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>“Website kami jadi jauh lebih profesional. Prosesnya cepat, komunikasinya jelas, dan hasilnya sesuai kebutuhan bisnis kami.”</p>
+              <div class="client">
+                <div class="avatar">A</div>
+                <div>
+                  <strong>Andi Rahman</strong>
+                  <span>Pemilik UKM</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>“Digital Lombok membantu kami merancang strategi digital yang lebih terarah. Setelah website dan iklan kami hadir, trafik dan inquiry meningkat.”</p>
+              <div class="client">
+                <div class="avatar">S</div>
+                <div>
+                  <strong>Siti Nurbaya</strong>
+                  <span>Owner Brand Lokal</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>“Timnya responsif dan sangat paham kebutuhan bisnis lokal. Kami merasa dibantu dengan pendekatan yang bersahabat dan terukur.”</p>
+              <div class="client">
+                <div class="avatar">R</div>
+                <div>
+                  <strong>Rizky Hadi</strong>
+                  <span>Founder Startup</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="kontak">
+        <div class="container">
+          <div class="contact-wrap">
+            <div class="contact-box">
+              <div class="section-head" style="margin:0; text-align:left; max-width:none;">
+                <span class="kicker">Kontak</span>
+                <h2 style="font-size:clamp(1.8rem, 3vw, 2.5rem);">Mari diskusikan kebutuhan digital Anda</h2>
+              </div>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <div class="icon">📍</div>
+                  <div>
+                    <strong>Lokasi</strong>
+                    <span>Mataram, Nusa Tenggara Barat</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">📞</div>
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812 3456 7890</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">✉️</div>
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:hello@digitallombok.com">hello@digitallombok.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <form>
+                <div class="field-row">
+                  <label>
+                    Nama
+                    <input type="text" placeholder="Masukkan nama Anda" />
+                  </label>
+                  <label>
+                    Email
+                    <input type="email" placeholder="contoh@email.com" />
+                  </label>
+                </div>
+                <div class="field-row">
+                  <label>
+                    Perusahaan
+                    <input type="text" placeholder="Nama perusahaan" />
+                  </label>
+                  <label>
+                    WhatsApp
+                    <input type="tel" placeholder="Nomor WhatsApp" />
+                  </label>
+                </div>
+                <label>
+                  Pesan
+                  <textarea placeholder="Jelaskan kebutuhan digital Anda"></textarea>
+                </label>
+                <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Kirim Permintaan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div class="container">
           <div class="contact-cta">
             <div>
