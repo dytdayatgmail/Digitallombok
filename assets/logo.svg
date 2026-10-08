@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img" aria-labelledby="title desc">
+  <title id="title">Digital Lombok logo</title>
+  <desc id="desc">Blue square background with black stylized D letter and text DIGITAL LOMBOK.</desc>
+  <rect width="1000" height="900" fill="#4d7dd6"/>
+  <path fill="#000000" fill-rule="evenodd" d="M 2 0 H 520 C 760 0 930 160 930 450 C 930 740 760 900 520 900 H 2 V 0 Z M 170 110 H 500 C 685 110 790 220 790 450 C 790 680 685 790 500 790 H 170 V 110 Z"/>
+  <text x="500" y="760" text-anchor="middle" font-size="86" font-family="Segoe UI, Arial, sans-serif" font-weight="800" fill="#000000" letter-spacing="1">DIGITAL LOMBOK</text>
+</svg>
