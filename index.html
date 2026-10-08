@@ -56,10 +56,22 @@
         align-items: center;
       }
       .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
         color: #fff;
-        font-size: 1.7rem;
         font-weight: 800;
         letter-spacing: -0.04em;
+      }
+      .brand-logo {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+        display: block;
+      }
+      .brand-text {
+        font-size: 1.7rem;
+        line-height: 1;
       }
       .brand-accent { color: #7dd3fc; }
       .nav-links {
@@ -514,6 +526,10 @@
           justify-content: center;
           gap: 14px;
         }
+        .brand {
+          justify-content: center;
+          width: 100%;
+        }
         .hero, section { padding-top: 70px; padding-bottom: 70px; }
         .services-grid, .process-grid, .why-grid, .about-wrap, .portfolio-grid, .testimonial-grid, .field-row { grid-template-columns: 1fr; }
         .hero-actions { flex-direction: column; align-items: flex-start; }
@@ -523,7 +539,10 @@
   <body>
     <header class="topbar">
       <div class="container nav">
-        <a href="#home" class="brand">Digital<span class="brand-accent">Lombok</span></a>
+        <a href="#home" class="brand" aria-label="Digital Lombok">
+          <img src="assets/logo.svg" alt="Logo Digital Lombok" class="brand-logo" />
+          <span class="brand-text">Digital<span class="brand-accent">Lombok</span></span>
+        </a>
         <nav class="nav-links" aria-label="Menu navigasi">
           <a href="#home">Beranda</a>
           <a href="#tentang">Tentang</a>
