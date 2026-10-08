@@ -261,7 +261,7 @@
         gap: 28px;
         align-items: center;
       }
-      .about-box, .feature, .service-card, .process-step, .why-card, .portfolio-card, .testimonial, .contact-box { 
+      .about-box, .feature, .service-card, .process-step, .why-card, .portfolio-card, .testimonial, .contact-box {
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 22px;
@@ -531,7 +531,8 @@
           width: 100%;
         }
         .hero, section { padding-top: 70px; padding-bottom: 70px; }
-        .services-grid, .process-grid, .why-grid, .about-wrap, .portfolio-grid, .testimonial-grid, .field-row { grid-template-columns: 1fr; }
+        .services-grid, .process-grid, .why-grid, .portfolio-grid, .testimonial-grid, .about-wrap, .contact-wrap { grid-template-columns: 1fr; }
+        .field-row { grid-template-columns: 1fr; }
         .hero-actions { flex-direction: column; align-items: flex-start; }
       }
     </style>
@@ -548,7 +549,7 @@
           <a href="#tentang">Tentang</a>
           <a href="#layanan">Layanan</a>
           <a href="#proses">Proses</a>
-          <a href="#portfolio">Portofolio</a>
+          <a href="#portfolio">Portfolio</a>
           <a href="#kontak">Kontak</a>
         </nav>
       </div>
@@ -737,60 +738,33 @@
         </div>
       </section>
 
-      <section>
-        <div class="container">
-          <div class="section-head">
-            <span class="kicker">Kenapa Digital Lombok?</span>
-            <h2>Solusi digital yang dirancang untuk tumbuh bersama bisnis Anda</h2>
-          </div>
-
-          <div class="why-grid">
-            <div class="why-card">
-              <div class="service-icon">📱</div>
-              <h3>Mobile First</h3>
-              <p>Semua produk didesain agar tampil optimal di perangkat mobile, tablet, dan desktop.</p>
-            </div>
-            <div class="why-card">
-              <div class="service-icon">🧠</div>
-              <h3>Berbasis Strategi</h3>
-              <p>Setiap keputusan kami berorientasi pada kebutuhan pasar, hasil, dan efisiensi bisnis.</p>
-            </div>
-            <div class="why-card">
-              <div class="service-icon">🛠️</div>
-              <h3>Fleksibel & Adaptif</h3>
-              <p>Kami siap menyesuaikan solusi digital sesuai kebutuhan usaha dan target audiens.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="portfolio">
         <div class="container">
           <div class="section-head">
-            <span class="kicker">Portofolio</span>
-            <h2>Contoh hasil kerja yang kami bangun untuk mitra usaha</h2>
+            <span class="kicker">Portfolio</span>
+            <h2>Hasil kerja yang membantu bisnis tumbuh</h2>
           </div>
 
           <div class="portfolio-grid">
             <article class="portfolio-card">
+              <div class="portfolio-thumb">🏨</div>
+              <div class="portfolio-body">
+                <h3>Hotel & Resort</h3>
+                <p>Website booking dengan pengalaman pengguna yang premium dan memikat.</p>
+              </div>
+            </article>
+            <article class="portfolio-card">
+              <div class="portfolio-thumb">🛍️</div>
+              <div class="portfolio-body">
+                <h3>Marketplace UMKM</h3>
+                <p>Platform digital untuk memperluas jangkauan penjualan dan brand lokal.</p>
+              </div>
+            </article>
+            <article class="portfolio-card">
               <div class="portfolio-thumb">🏪</div>
               <div class="portfolio-body">
-                <h3>Website UMKM</h3>
-                <p>Desain modern dengan fokus pada penjualan, brand, dan konversi pelanggan lokal.</p>
-              </div>
-            </article>
-            <article class="portfolio-card">
-              <div class="portfolio-thumb">📣</div>
-              <div class="portfolio-body">
-                <h3>Landing Page Produk</h3>
-                <p>Campaign siap pakai yang membantu bisnis menjangkau audiens lebih luas dan tentu saja lebih cepat.</p>
-              </div>
-            </article>
-            <article class="portfolio-card">
-              <div class="portfolio-thumb">📊</div>
-              <div class="portfolio-body">
-                <h3>Dashboard & Strategi</h3>
-                <p>Pendampingan digital berbasis data agar keputusan bisnis lebih tepat dan terukur.</p>
+                <h3>Business Profile</h3>
+                <p>Brand presence yang lebih kuat untuk usaha, koperasi, dan institusi.</p>
               </div>
             </article>
           </div>
@@ -801,114 +775,107 @@
         <div class="container">
           <div class="section-head">
             <span class="kicker">Testimoni</span>
-            <h2>Apa kata mitra yang sudah bekerja sama dengan kami</h2>
+            <h2>Klien yang puas dengan hasil kerja kami</h2>
           </div>
 
           <div class="testimonial-grid">
-            <article class="testimonial">
+            <div class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>“Website kami jadi jauh lebih profesional. Prosesnya cepat, komunikasinya jelas, dan hasilnya sesuai kebutuhan bisnis kami.”</p>
+              <p>"Prosesnya cepat, hasilnya rapi, dan website kami jauh lebih profesional daripada sebelumnya."</p>
               <div class="client">
                 <div class="avatar">A</div>
                 <div>
-                  <strong>Andi Rahman</strong>
-                  <span>Pemilik UKM</span>
+                  <strong>Ahmad</strong>
+                  <span>Pemilik UMKM</span>
                 </div>
               </div>
-            </article>
-            <article class="testimonial">
+            </div>
+            <div class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>“Digital Lombok membantu kami merancang strategi digital yang lebih terarah. Setelah website dan iklan kami hadir, trafik dan inquiry meningkat.”</p>
+              <p>"Digital Lombok membantu kami menjelaskan bisnis dengan lebih baik dan lebih mudah diingat pelanggan."</p>
               <div class="client">
-                <div class="avatar">S</div>
+                <div class="avatar">N</div>
                 <div>
-                  <strong>Siti Nurbaya</strong>
-                  <span>Owner Brand Lokal</span>
+                  <strong>Nurul</strong>
+                  <span>Brand Manager</span>
                 </div>
               </div>
-            </article>
-            <article class="testimonial">
+            </div>
+            <div class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>“Timnya responsif dan sangat paham kebutuhan bisnis lokal. Kami merasa dibantu dengan pendekatan yang bersahabat dan terukur.”</p>
+              <p>"Konsultasi yang sangat jelas dan solusi yang benar-benar sesuai dengan kebutuhan usaha kami."</p>
               <div class="client">
                 <div class="avatar">R</div>
                 <div>
-                  <strong>Rizky Hadi</strong>
-                  <span>Founder Startup</span>
+                  <strong>Rizal</strong>
+                  <span>Direktur</span>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="kontak">
-        <div class="container">
-          <div class="contact-wrap">
-            <div class="contact-box">
-              <div class="section-head" style="margin:0; text-align:left; max-width:none;">
-                <span class="kicker">Kontak</span>
-                <h2 style="font-size:clamp(1.8rem, 3vw, 2.5rem);">Mari diskusikan kebutuhan digital Anda</h2>
+        <div class="container contact-wrap">
+          <div class="contact-box">
+            <span class="kicker" style="display:inline-block; margin-bottom:10px;">Kontak</span>
+            <h2 style="margin:0 0 12px; font-size:clamp(2rem,4vw,2.7rem); color:var(--dark);">Mari mulai proyek Anda</h2>
+            <p style="margin:0; color:var(--muted);">
+              Tim kami siap membantu Anda merancang solusi digital yang tepat untuk kebutuhan bisnis Anda.
+            </p>
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="icon">📍</div>
+                <div>
+                  <strong>Lokasi</strong>
+                  <span>Mataram, Nusa Tenggara Barat</span>
+                </div>
               </div>
-              <div class="contact-list">
-                <div class="contact-item">
-                  <div class="icon">📍</div>
-                  <div>
-                    <strong>Lokasi</strong>
-                    <span>Mataram, Nusa Tenggara Barat</span>
-                  </div>
+              <div class="contact-item">
+                <div class="icon">📞</div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812-3456-7890</a>
                 </div>
-                <div class="contact-item">
-                  <div class="icon">📞</div>
-                  <div>
-                    <strong>WhatsApp</strong>
-                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812 3456 7890</a>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">✉️</div>
-                  <div>
-                    <strong>Email</strong>
-                    <a href="mailto:hello@digitallombok.com">hello@digitallombok.com</a>
-                  </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@digitallombok.id">hello@digitallombok.id</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="contact-box">
-              <form>
-                <div class="field-row">
-                  <label>
-                    Nama
-                    <input type="text" placeholder="Masukkan nama Anda" />
-                  </label>
-                  <label>
-                    Email
-                    <input type="email" placeholder="contoh@email.com" />
-                  </label>
-                </div>
-                <div class="field-row">
-                  <label>
-                    Perusahaan
-                    <input type="text" placeholder="Nama perusahaan" />
-                  </label>
-                  <label>
-                    WhatsApp
-                    <input type="tel" placeholder="Nomor WhatsApp" />
-                  </label>
-                </div>
+          <div class="contact-box">
+            <form>
+              <div class="field-row">
                 <label>
-                  Pesan
-                  <textarea placeholder="Jelaskan kebutuhan digital Anda"></textarea>
+                  Nama
+                  <input type="text" name="name" placeholder="Nama lengkap" />
                 </label>
-                <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Kirim Permintaan</button>
-              </form>
-            </div>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="Email aktif" />
+                </label>
+              </div>
+              <label>
+                Perusahaan / Usaha
+                <input type="text" name="company" placeholder="Nama usaha atau instansi" />
+              </label>
+              <label>
+                Pesan
+                <textarea name="message" placeholder="Ceritakan kebutuhan digital Anda"></textarea>
+              </label>
+              <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Kirim Pesan</button>
+            </form>
           </div>
         </div>
       </section>
 
-      <section>
+      <section id="kontak-cta">
         <div class="container">
           <div class="contact-cta">
             <div>
